@@ -1,0 +1,11 @@
+<h1>Latest News</h1>
+<br>
+{% if article_list %}
+    {% for article in article_list %}
+        <h2>{{ article.headline }}</h2>
+        <h3>{{ article.published }}</h3>
+        <p>{{ article.sub_heading }}</p>
+    {% endfor %}
+{% else %}
+    <p>No news is available... yawn</p>
+{% endif %}
